@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <a href="imagesearch.html">Image Search</a>
+            <a href="advancedsearch.html">Advanced Search</a>
+        </nav>
+        <img class="logo" src="mainlogo.png">
+        <form class="search" action="javascript:searchURL()">
+            <input type="text" id="searchInput" name="q">
+            <div class="buttons">
+                <input type="submit" value="Google Search">
+                <input type="submit" value="I'm Feeling Lucky">
+            </div>
+        </form>
+    </body>
+
+    <script type="text/javascript">
+        function searchURL() {
+            window.location = "https://www.google.com/search?q=" + 
+            document.getElementById("searchInput").value;
+            return false;
+        }
+    </script>
+
+</html>

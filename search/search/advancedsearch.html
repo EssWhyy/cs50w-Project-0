@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Advanced Search</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <a href="index.html">Main Search</a>
+        </nav>
+        
+        <h1>Find pages with:</h1>
+        
+        <form class="advancedsearch" action="javascript:advancedSearchURL()">
+            <div class = "advancedfield">
+                <label for="lfname">all these words:</label> 
+                <input type="text" id="all" name="a">
+            </div>
+            <div class = "advancedfield">
+                <label for="lfname">this exact word or phrase:</label> 
+                <input type="text" id="exact" name="b">
+            </div>
+            <div class = "advancedfield">  
+                <label for="lfname">any of these words:</label> 
+                <input type="text" id="any" name="c">
+            </div>
+            <div class = "advancedfield">
+                <label for="lfname">none of these words:</label> 
+                <input type="text" id="none" name="d">
+            </div>
+            
+        <input class="advancedbutton" type="submit" value="Advanced Search">
+        </form>
+    </body>
+
+    <script type="text/javascript">
+        function advancedSearchURL() {
+            window.location = "https://www.google.com/search?q=" +
+                document.getElementById("searchInput").value;
+            return false;
+        }
+    </script>
+</html>

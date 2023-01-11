@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Image Search</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <a href="index.html">Main Search</a>
+        </nav>
+        <img class="logo" src="imagesearchlogo.png">
+        <form class="search" action="javascript:imageSearchURL()">
+            <input type="text" id="searchInput" name="q">
+            <input type="submit" value="Search for Image">
+        </form>
+    </body>
+    <script type="text/javascript">
+        function imageSearchURL() {
+            window.location = "https://www.google.com/search?q=" +
+                document.getElementById("searchInput").value +
+                "&tbm=isch";
+            return false;
+        }
+    </script>
+</html>
