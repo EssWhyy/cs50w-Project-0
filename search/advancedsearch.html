@@ -35,8 +35,16 @@
 
     <script type="text/javascript">
         function advancedSearchURL() {
-            window.location = "https://www.google.com/search?q=" +
-                document.getElementById("searchInput").value;
+            url_prefix = "https://www.google.com/search?"
+            
+            all_search = "&as_q=" + document.getElementById("all").value
+            exact_search = "&as_epq=" + document.getElementById("exact").value
+            any_search = "&as_oq=" + document.getElementById("any").value
+            none_search = "&as_eq=" + document.getElementById("none").value
+
+            full_url = url_prefix + all_search + exact_search + any_search + none_search
+            window.location = full_url;
+            
             return false;
         }
     </script>
