@@ -13,8 +13,8 @@
         <form class="search" action="javascript:searchURL()">
             <input type="text" id="searchInput" name="q">
             <div class="buttons">
-                <input type="submit" value="Google Search">
-                <input type="submit" value="I'm Feeling Lucky">
+                <input type="submit" id="default" value="Google Search">
+                <input type="submit" id="lucky" value="I'm Feeling Lucky">
             </div>
         </form>
     </body>
@@ -23,6 +23,11 @@
         function searchURL() {
             window.location = "https://www.google.com/search?q=" + 
             document.getElementById("searchInput").value;
+            return false;
+        }
+        document.getElementById('lucky').onclick = function () {
+            window.location = "https://www.google.com/search?q=" +
+            document.getElementById("searchInput").value + "&btnI=I%27m+Feeling+Lucky";
             return false;
         }
     </script>
